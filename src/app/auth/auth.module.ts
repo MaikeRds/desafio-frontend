@@ -1,3 +1,4 @@
+import { CadastroModule } from './components/cadastro/cadastro.module';
 import { LoginModule } from './components/login/login.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -14,7 +15,8 @@ import { MatSnackBar } from '@angular/material/snack-bar';
     CommonModule,
     HttpClientModule,
     RouterModule,
-    LoginModule
+    LoginModule,
+    CadastroModule
   ],
   providers: [AuthService, MatSnackBar]
 })

@@ -1,3 +1,4 @@
+import { CadastroComponent } from './auth/components/cadastro/cadastro.component';
 import { AuthGuard } from './auth/shared/auth.guard';
 import { HomeComponent } from './home/home.component';
 import { NgModule } from '@angular/core';
@@ -17,6 +18,7 @@ const routes: Routes = [{
 children: [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
+  { path: 'cadastro', component: CadastroComponent },
 ]
 },
 ];

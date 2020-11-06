@@ -1,1 +1,28 @@
-<p>login works!</p>
+<mat-card class="box mat-elevation-z12">
+<div class="logo" >
+  <img src="../../../../assets/logo.png" width="80%">
+
+</div>
+<mat-card-title>Faça seu login</mat-card-title>
+<mat-card-content>
+<form class="form" (ngSubmit)="onSubmit()" [formGroup]="formulario">
+<p>
+  <mat-form-field>
+    <input type="text" matInput placeholder="Username" name="username" formControlName="username">
+  </mat-form-field>
+</p>
+
+<p>
+  <mat-form-field>
+    <input type="password" matInput placeholder="Password"  name="password" formControlName="password">
+  </mat-form-field>
+</p>
+
+<mat-card-actions>
+  <button mat-flat-button color="primary" class="button" mat-button [disabled]= "formulario.invalid">Login</button>
+  <a class="cadastrar" mat-button color="primary">Cadastre-se</a>
+</mat-card-actions>
+
+</form>
+</mat-card-content>
+</mat-card>
