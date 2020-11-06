@@ -1,3 +1,4 @@
+import { AppMaterialModule } from './../../../app-material.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { EstabelecimentoCreateComponent } from './estabelecimento-create.component';
@@ -7,7 +8,9 @@ import { EstabelecimentoCreateComponent } from './estabelecimento-create.compone
 @NgModule({
   declarations: [EstabelecimentoCreateComponent],
   imports: [
-    CommonModule
-  ]
+    CommonModule,
+    AppMaterialModule
+  ],
+  exports:[EstabelecimentoCreateComponent]
 })
 export class EstabelecimentoCreateModule { }

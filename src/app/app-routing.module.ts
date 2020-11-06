@@ -1,3 +1,4 @@
+import { EstabelecimentoCreateComponent } from './estabelecimento/components/estabelecimento-create/estabelecimento-create.component';
 import { CadastroComponent } from './auth/components/cadastro/cadastro.component';
 import { AuthGuard } from './auth/shared/auth.guard';
 import { HomeComponent } from './home/home.component';
@@ -11,6 +12,7 @@ const routes: Routes = [{
   path: '', component: HomeComponent,
     children: [
       { path: '', component: EstabelecimentoComponent },
+      { path: 'estabelecimento/cadastrar', component: EstabelecimentoCreateComponent },
     ],
     canActivate: [AuthGuard]
 },
