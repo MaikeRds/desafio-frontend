@@ -24,6 +24,11 @@ mat-card {
   font-weight: 100;
 }
 
+.mat-card-actions .mat-button, .mat-card-actions .mat-raised-button, .mat-card-actions .mat-stroked-button {
+  margin: 0 0px;
+}
+
+
 
 mat-card-title,
 mat-card-content {

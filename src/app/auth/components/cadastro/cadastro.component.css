@@ -1,0 +1,63 @@
+:host {
+  display: flex;
+  justify-content: center;
+}
+mat-card {
+  min-width: 500px;
+  min-height: 500px;
+  padding: 20px 50px 50px 50px;
+}
+.mat-form-field {
+  width: 100%;
+  min-width: 450px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.mat-card-title {
+  font-size: 25px;
+  font-weight: 100;
+}
+
+
+mat-card-title,
+mat-card-content {
+  display: flex;
+  justify-content: center;
+}
+
+.mat-card-actions .mat-button, .mat-card-actions .mat-raised-button, .mat-card-actions .mat-stroked-button {
+  margin: 0 0px;
+}
+
+.error {
+  padding: 16px;
+  width: 200px;
+  color: white;
+  background-color: red;
+}
+
+.button {
+  width: 100%;
+  padding: 20px;
+}
+
+.cadastrar {
+  width: 100%;
+  padding: 20px;
+}
+
+.mat-form-field {
+  font-size: 15px;
+
+}
+
+input {
+  font-size: 20px;
+  padding: 20PX;
+}

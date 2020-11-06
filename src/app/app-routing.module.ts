@@ -19,9 +19,7 @@ children: [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
   { path: 'cadastro', component: CadastroComponent },
-]
-},
-];
+]},];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

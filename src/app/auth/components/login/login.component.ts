@@ -24,8 +24,8 @@ export class LoginComponent implements OnInit   {
 
   configurarFormulario() {
     this.formulario = this.formBuilder.group({
-      username: ['', [Validators.required,Validators.minLength(3)]],
-      password: ['', [Validators.required,Validators.minLength(3)]],
+      username: ['', [Validators.required,Validators.minLength(6)]],
+      password: ['', [Validators.required,Validators.minLength(6)]],
     });
   }
 
@@ -40,7 +40,6 @@ export class LoginComponent implements OnInit   {
         this.authService.showMessage(error.error.message, true)
        // console.error(error.error.message)
       }
-
   }
 
 }

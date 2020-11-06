@@ -36,6 +36,13 @@ export class AuthService {
     return false;
   }
 
+  async cadastrar(usuario: IAuth) {
+    const {username, password } = usuario
+
+    return await this.http.post<any>(`${environment.api}/usuario`, {usuario: username, senha: password}
+    ).toPromise();
+  }
+
   isTokenExpired(token: string){
     if (!token) {
       return true;
