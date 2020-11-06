@@ -1,3 +1,6 @@
+import { AuthModule } from './auth/auth.module';
+import { EstabelecimentoModule } from './estabelecimento/estabelecimento.module';
+import { HomeModule } from './home/home.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -12,7 +15,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    AuthModule,
+    HomeModule,
+    EstabelecimentoModule
   ],
   providers: [],
   bootstrap: [AppComponent]
