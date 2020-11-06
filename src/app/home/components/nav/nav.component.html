@@ -1,0 +1,29 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav-content>
+    <mat-toolbar color="primary" class="nav-items">
+      <div class="nav-item-logo">
+      <a href='#' mat-icon-button  mat-icon-button class="btn"  >
+        <mat-icon>menu</mat-icon>
+      </a>
+
+      <a href="" class="logo">
+
+      </a>
+      </div>
+
+      <div class="nav-item-logout">
+        <a href='' mat-icon-button class="btn"  >
+          <mat-icon class="logout">exit_to_app</mat-icon>
+        </a>
+      </div>
+
+    </mat-toolbar>
+      <div class="content">
+        <router-outlet></router-outlet>
+
+      </div>
+      <!-- <app-footer></app-footer> -->
+
+  </mat-sidenav-content>
+
+</mat-sidenav-container>
