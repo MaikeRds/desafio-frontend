@@ -21,6 +21,7 @@ mat-sidenav-container {
   justify-content: space-between;
 }
 
+
 .sidenav  mat-nav-list a {
   color: #fff;
 }
@@ -42,7 +43,6 @@ mat-sidenav-container {
 }
 
 .logo {
-  display: flex;
-  margin-left: 10px;
-  justify-content: space-between;
+  width: 100%;
 }
+
