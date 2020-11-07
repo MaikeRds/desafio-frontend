@@ -70,7 +70,7 @@ export class EstabelecimentoService {
   // Manipulação de erros
   handleError(error: HttpErrorResponse) {
     let errorMessage = '';
-    console.log(error);
+   // console.log(error);
     if (error.error instanceof ErrorEvent) {
       // Erro ocorreu no lado do client
       errorMessage = error.error.message;

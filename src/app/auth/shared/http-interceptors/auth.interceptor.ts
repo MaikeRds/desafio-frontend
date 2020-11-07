@@ -45,9 +45,9 @@ export class AuthInterceptor implements HttpInterceptor {
       // Erro de client-side ou de rede
      // console.error('Ocorreu um erro:', error.error.message);
     } else {
-      console.error(
-        `Código do erro ${error.status}, ` +
-        `Erro: ${JSON.stringify(error.error)}`);
+      // console.error(
+      //   `Código do erro ${error.status}, ` +
+      //   `Erro: ${JSON.stringify(error.error)}`);
     }
     // retornar um observable com uma mensagem amigavel.
     return throwError({...error.error, status: error.status});

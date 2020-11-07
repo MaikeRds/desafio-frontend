@@ -1,0 +1,42 @@
+mat-form-field {
+  padding-right: 10px;
+}
+
+.razao-social {
+  min-width: 410px;
+}
+
+.nome-fantasia {
+  min-width: 410px;
+}
+
+.ramo-de-atividade {
+  min-width: 620px;
+}
+
+.email {
+  min-width: 620px;
+}
+
+.endereco {
+  min-width: 410px;
+}
+
+mat-card-title {
+  margin-bottom: 30px;
+}
+
+@media screen and (max-width: 710px) {
+  mat-form-field {
+    width: 100%;
+    min-width:100%!important;
+  }
+}
+
+.form-button {
+  margin-top: 20px;
+}
+.form-button button {
+  margin-right: 10px;
+  width: 120px;
+}
