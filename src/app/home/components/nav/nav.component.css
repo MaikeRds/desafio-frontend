@@ -36,6 +36,9 @@ mat-sidenav-container {
   display: flex;
   justify-content: space-between;
 }
+.mat-toolbar {
+  z-index: 1000!important;
+}
 
 
 .sidenav  mat-nav-list a {
