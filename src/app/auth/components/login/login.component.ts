@@ -37,7 +37,7 @@ export class LoginComponent implements OnInit   {
         });
         this.router.navigate(['']);
       } catch (error) {
-        this.authService.showMessage(error.error.message, true)
+        this.authService.showMessage(error.message, true)
        // console.error(error.error.message)
       }
   }

@@ -59,7 +59,7 @@ export class CadastroComponent implements OnInit {
         this.router.navigate(['/login']);
         this.authService.showMessage('Cadastrado com sucesso.', true)
       } catch (error) {
-        console.log(error);
+        // console.log(error);
         this.authService.showMessage(error.message, true)
       }
 
