@@ -2,6 +2,8 @@ import { AppMaterialModule } from './../../../app-material.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { EstabelecimentoCreateComponent } from './estabelecimento-create.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -9,8 +11,10 @@ import { EstabelecimentoCreateComponent } from './estabelecimento-create.compone
   declarations: [EstabelecimentoCreateComponent],
   imports: [
     CommonModule,
-    AppMaterialModule
-  ],
-  exports:[EstabelecimentoCreateComponent]
+    AppMaterialModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+  ]
 })
 export class EstabelecimentoCreateModule { }

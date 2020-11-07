@@ -1,99 +1,122 @@
 <mat-card>
   <mat-card-title>Cadastrar Estabelecimento</mat-card-title>
-  <form class="form-estabelecimento">
+  <form class="form-estabelecimento"  [formGroup]="formulario">
     <div class="form-group">
 
-      <mat-form-field class="razao-social">
-        <mat-label>Razão Social</mat-label>
-        <input matInput >
+      <mat-form-field class="razao-social"  appearance="outline">
+        <mat-label for="razaoSocial">Razão Social</mat-label>
+        <input matInput name="razaoSocial" id="razaoSocial" formControlName="razaoSocial">
       </mat-form-field>
 
-      <mat-form-field>
-        <mat-label>Número CRF-PJ</mat-label>
-        <input matInput >
+      <mat-form-field class="crf-pj"  appearance="outline">
+        <mat-label>CRF-PJ</mat-label>
+        <input matInput name="numCrfPj" formControlName="numCrfPj">
       </mat-form-field>
 
     </div>
 
     <div class="form-group">
 
-      <mat-form-field>
+      <mat-form-field  class="nome-fantasia" appearance="outline">
         <mat-label>Nome Fantasia</mat-label>
-        <input matInput >
+        <input matInput name="nomeFantasia" formControlName="nomeFantasia">
       </mat-form-field>
 
-      <mat-form-field>
-        <mat-label>Ramo de Atividade</mat-label>
-        <input matInput >
-      </mat-form-field>
-
-      <mat-form-field>
+      <mat-form-field class="cnpj" appearance="outline">
         <mat-label>CNPJ</mat-label>
-        <input matInput >
+        <input matInput name="cnpj" formControlName="cnpj">
       </mat-form-field>
 
     </div>
 
     <div class="form-group">
 
-      <mat-form-field>
+      <mat-form-field class="ramo-de-atividade" appearance="outline">
+        <mat-label>Ramo de Atividade</mat-label>
+        <input matInput name="ramoAtividade" formControlName="ramoAtividade">
+      </mat-form-field>
+
+    </div>
+
+    <div class="form-group">
+
+      <mat-form-field class="cep" appearance="outline">
         <mat-label>CEP</mat-label>
-        <input matInput >
+        <input matInput name="cep" formControlName="cep">
       </mat-form-field>
 
-      <mat-form-field>
+      <mat-form-field class="endereco" appearance="outline">
         <mat-label>Endereço (logradouro)</mat-label>
-        <input matInput >
+        <input matInput name="endereco" formControlName="endereco">
       </mat-form-field>
 
-      <mat-form-field>
+    </div>
+
+    <div class="form-group">
+      <mat-form-field class="numero" appearance="outline">
         <mat-label>Numero</mat-label>
-        <input matInput >
+        <input matInput name="numero" formControlName="numero">
       </mat-form-field>
 
-      <mat-form-field>
+      <mat-form-field class="complemento" appearance="outline">
         <mat-label>Complemento</mat-label>
-        <input matInput >
+        <input matInput name="complemento" formControlName="complemento">
       </mat-form-field>
-
     </div>
+
 
     <div class="form-group">
 
-      <mat-form-field>
+      <mat-form-field class="estado" appearance="outline">
         <mat-label>Estado</mat-label>
-        <input matInput >
+        <input matInput name="estado" formControlName="estado">
       </mat-form-field>
 
-      <mat-form-field>
+      <mat-form-field class="cidade" appearance="outline">
         <mat-label>Cidade</mat-label>
-        <input matInput >
+        <input matInput name="cidade" formControlName="cidade">
       </mat-form-field>
 
-      <mat-form-field>
+      <mat-form-field class="bairro" appearance="outline">
         <mat-label>Bairro</mat-label>
-        <input matInput >
+        <input matInput name="bairro" formControlName="bairro">
       </mat-form-field>
 
     </div>
 
     <div class="form-group">
 
-      <mat-form-field>
+      <mat-form-field class="email" appearance="outline">
         <mat-label>E-mail</mat-label>
-        <input matInput >
+        <input matInput name="email" formControlName="email">
       </mat-form-field>
 
-      <mat-form-field>
+    </div>
+
+    <div class="form-group">
+      <mat-form-field class="telefone-fixo" appearance="outline">
         <mat-label>Telefone Fixo</mat-label>
-        <input matInput >
+        <input matInput name="fone" formControlName="fone">
+        <mat-icon matSuffix>phone</mat-icon>
+        <mat-hint>Include area code</mat-hint>
       </mat-form-field>
 
-      <mat-form-field>
+      <mat-form-field class="celular" appearance="outline">
         <mat-label>Celular</mat-label>
-        <input matInput >
+        <input matInput name="cel" formControlName="cel">
+        <mat-icon matSuffix>phone</mat-icon>
+        <mat-hint>Include area code</mat-hint>
       </mat-form-field>
+    </div>
 
+    <div class="form-button">
+      <button mat-raised-button color="primary" (click)="create()" [disabled]= "formulario.invalid" >
+        Salvar
+      </button>
+
+      <button mat-raised-button (click)="cancel()" >
+        Cancelar
+      </button>
     </div>
   </form>
 </mat-card>
