@@ -1,3 +1,4 @@
+import { httpInterceptorProviders } from './auth/shared/http-interceptors';
 import { AuthModule } from './auth/auth.module';
 import { EstabelecimentoModule } from './estabelecimento/estabelecimento.module';
 import { HomeModule } from './home/home.module';
@@ -7,6 +8,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 @NgModule({
   declarations: [
@@ -20,7 +22,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HomeModule,
     EstabelecimentoModule
   ],
-  providers: [],
+  providers: [httpInterceptorProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
