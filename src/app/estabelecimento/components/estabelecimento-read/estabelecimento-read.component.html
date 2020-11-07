@@ -1,1 +1,180 @@
-<p>estabelecimento-read works!</p>
+
+<div class="container" >
+  <mat-card class="home mat-elevation-z2 card-mt">
+      <mat-card-title class="title">Lista de Estabelecimentos</mat-card-title>
+
+
+    <mat-card-subtitle style="margin-top: 30px;">
+      <mat-form-field   appearance="outline">
+          <mat-label>Localidade</mat-label>
+          <input matInput  (keyup)="applyFilter($event.target.value)"  #input>
+          <mat-icon matSuffix>search</mat-icon>
+      </mat-form-field>
+
+    </mat-card-subtitle>
+    <mat-card-content >
+      <div class="table mat-elevation-z1" style="margin-top: 10px;">
+      <table mat-table [dataSource]="dataSource" matSort >
+        <!-- Id -->
+        <ng-container matColumnDef="id" sticky >
+            <th mat-header-cell *matHeaderCellDef mat-sort-header class="hide-arrow">
+            #
+            </th>
+            <td mat-cell *matCellDef="let row">{{row.id}}</td>
+        </ng-container>
+
+        <!-- Razão Social -->
+        <ng-container matColumnDef="razaoSocial">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header class="hide-arrow" >
+            Razão Social
+          </th>
+          <td mat-cell *matCellDef="let row">{{row.razaoSocial}}</td>
+        </ng-container>
+
+        <!-- CRF-PJ -->
+        <ng-container matColumnDef="numCrfPj"  >
+          <th mat-header-cell *matHeaderCellDef mat-sort-header class="hide-arrow" >
+            CRF-PJ
+          </th>
+          <td mat-cell *matCellDef="let row">{{row.numCrfPj}}</td>
+        </ng-container>
+
+        <!-- Nome Fantasia -->
+        <ng-container matColumnDef="nomeFantasia"  >
+          <th mat-header-cell *matHeaderCellDef mat-sort-header class="hide-arrow" >
+            Nome Fantasia
+          </th>
+          <td mat-cell *matCellDef="let row">{{row.nomeFantasia}}</td>
+        </ng-container>
+
+        <!-- CNPJ -->
+        <ng-container matColumnDef="cnpj"  >
+          <th mat-header-cell *matHeaderCellDef mat-sort-header class="hide-arrow" >
+            CNPJ
+          </th>
+          <td mat-cell *matCellDef="let row">{{row.cnpj}}</td>
+        </ng-container>
+
+        <!-- Ramo de Atividade -->
+        <ng-container matColumnDef="ramoAtividade"  >
+          <th mat-header-cell *matHeaderCellDef mat-sort-header class="hide-arrow" >
+            Ramo de Atividade
+          </th>
+          <td mat-cell *matCellDef="let row">{{row.ramoAtividade}}</td>
+        </ng-container>
+
+        <!-- CEP  -->
+        <ng-container matColumnDef="cep"  >
+          <th mat-header-cell *matHeaderCellDef mat-sort-header class="hide-arrow" >
+            CEP
+          </th>
+          <td mat-cell *matCellDef="let row">{{row.cep}}</td>
+        </ng-container>
+
+        <!-- Endereço  -->
+        <ng-container matColumnDef="endereco"  >
+          <th mat-header-cell *matHeaderCellDef mat-sort-header class="hide-arrow" >
+            Endereço
+          </th>
+          <td mat-cell *matCellDef="let row">{{row.endereco}}</td>
+        </ng-container>
+
+        <!-- Numero -->
+        <ng-container matColumnDef="numero"  >
+          <th mat-header-cell *matHeaderCellDef mat-sort-header class="hide-arrow" >
+            Numero
+          </th>
+          <td mat-cell *matCellDef="let row">{{row.numero}}</td>
+        </ng-container>
+
+        <!-- Complemento -->
+        <ng-container matColumnDef="complemento"  >
+          <th mat-header-cell *matHeaderCellDef mat-sort-header class="hide-arrow" >
+            Complemento
+          </th>
+          <td mat-cell *matCellDef="let row">{{row.complemento}}</td>
+        </ng-container>
+
+        <!-- Estado -->
+        <ng-container matColumnDef="estado"  >
+          <th mat-header-cell *matHeaderCellDef mat-sort-header class="hide-arrow" >
+            Estado
+          </th>
+          <td mat-cell *matCellDef="let row">{{row.estado}}</td>
+        </ng-container>
+
+        <!-- Cidade -->
+        <ng-container matColumnDef="cidade"  >
+          <th mat-header-cell *matHeaderCellDef mat-sort-header class="hide-arrow" >
+            Cidade
+          </th>
+          <td mat-cell *matCellDef="let row">{{row.cidade}}</td>
+        </ng-container>
+
+        <!-- Bairro -->
+        <ng-container matColumnDef="bairro"  >
+          <th mat-header-cell *matHeaderCellDef mat-sort-header class="hide-arrow" >
+            Bairro
+          </th>
+          <td mat-cell *matCellDef="let row">{{row.bairro}}</td>
+        </ng-container>
+
+         <!-- E-mail -->
+         <ng-container matColumnDef="email"  >
+          <th mat-header-cell *matHeaderCellDef mat-sort-header class="hide-arrow" >
+            E-mail
+          </th>
+          <td mat-cell *matCellDef="let row">{{row.email}}</td>
+        </ng-container>
+
+
+         <!-- Telefone Fixo -->
+         <ng-container matColumnDef="fone"  >
+          <th mat-header-cell *matHeaderCellDef mat-sort-header class="hide-arrow" >
+            Telefone Fixo
+          </th>
+          <td mat-cell *matCellDef="let row">{{row.fone}}</td>
+        </ng-container>
+
+         <!-- Celular -->
+         <ng-container matColumnDef="cel"  >
+          <th mat-header-cell *matHeaderCellDef mat-sort-header class="hide-arrow" >
+            Celular
+          </th>
+          <td mat-cell *matCellDef="let row">{{row.cel}}</td>
+        </ng-container>
+
+        <!-- Action Column -->
+        <ng-container matColumnDef="action" stickyEnd>
+          <th mat-header-cell *matHeaderCellDef>Ações</th>
+          <td mat-cell *matCellDef="let row"class="acoes" >
+            <span>
+              <a href="/estabelecimento/atualizar/{{ row.id }}" class="edit">
+                  <i class="material-icons">
+                      edit
+                  </i>
+              </a>
+              <a href="/estabelecimento/deletar/{{ row.id }}" class="delete">
+                  <i class="material-icons">
+                    delete_outline
+                  </i>
+              </a>
+            </span>
+          </td>
+        </ng-container>
+
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+
+        <tr class="mat-row" *matNoDataRow>
+            <td class="mat-cell" colspan="4">Nenhum resultado encontrado!</td>
+        </tr>
+      </table>
+      </div>
+      <mat-paginator
+          #paginator  [pageSize]="10" [pageSizeOptions]="[5, 10, 20]" >
+      </mat-paginator>
+    </mat-card-content>
+  </mat-card>
+</div>

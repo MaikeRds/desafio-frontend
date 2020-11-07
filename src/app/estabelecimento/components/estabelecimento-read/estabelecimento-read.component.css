@@ -1,0 +1,81 @@
+.container {
+  margin-top: 20px;
+}
+
+.title {
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-weight: 500;
+}
+
+.table {
+  /* height: 400px; */
+  width: 100%;
+  max-width: 100%;
+  overflow: auto;
+}
+
+table {
+  width: 2000px;
+}
+.card-mt{
+   background-color: #fff;
+}
+
+td.mat-column-star {
+  width: 80px;
+  padding-right: 8px;
+}
+
+th.mat-column-position, td.mat-column-position {
+  padding-left: 8px;
+  text-align: center;
+}
+
+.mat-table-sticky:first-child {
+  border-right: 1px solid #e0e0e0;
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.mat-table-sticky:last-child {
+  border-left: 1px solid #e0e0e0;
+  text-align: center;
+  width: 80px;
+
+}
+.acoes span {
+  margin-left: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.title{
+  color: #282a36;
+}
+.edit {
+  margin-right: 10px;
+}
+
+.edit > i {
+  color: #166dba;
+}
+
+.delete > i {
+  color: #fc4b6c
+}
+
+.align-center{
+  height: 56px;
+  display: flex;
+  justify-content:center;
+}
+
+.mat-header-cell {
+  background-color: #3f51b5;
+  color: #fff;
+}
+
+::ng-deep .hide-arrow .mat-sort-header-arrow {
+  color: #fff;
+}
