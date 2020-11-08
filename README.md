@@ -1,27 +1,109 @@
-# DesafioFrontend
+# Descrição do projeto
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.8.
+> Gerenciamento de Estabelecimento.
 
-## Development server
+Os links para cada projeto estão abaixo:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- Backend API NodeJS: [https://github.com/MaikeRds/desafio-backend.git](https://github.com/MaikeRds/desafio-backend.git)
+- Frontend Angular:  [https://github.com/MaikeRds/desafio-frontend.git](https://github.com/MaikeRds/desafio-frontend.git)
 
-## Code scaffolding
+![https://i.ibb.co/VNPBWMN/Untitled.png](https://i.ibb.co/VNPBWMN/Untitled.png)
+![https://i.ibb.co/Y8wGY6T/Untitled-1.png](https://i.ibb.co/Y8wGY6T/Untitled-1.png)
+![https://i.ibb.co/0f5mT6N/testes.png](https://i.ibb.co/0f5mT6N/testes.png)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+### 🛠 Tecnologias
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+As seguintes ferramentas foram usadas na construção do projeto:
 
-## Running unit tests
+- Docker
+- Docker-Compose
+- Node.js
+- Angular
+- NestJS
+- TypeScript
+- TypeORM
+- PostgreSQL
+- Authentication - JWT
+- Swagger
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Como instalar
 
-## Running end-to-end tests
+---
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+### 🎲 Backend (API)
 
-## Further help
+- Para baixar o projeto siga as instruções abaixo:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+```bash
+$ git clone https://github.com/MaikeRds/desafio-backend.git
+$ cd desafio-backend
+```
+
+- Instalar usando docker para realizar processo automatizado de inicialização.
+
+```bash
+# Criar volume para persistir os dados do banco
+$ docker volume create --name=dbdata
+
+# Iniciar a construção de containers
+$ docker-compose up
+
+# O servidor inciará na porta:3000 - acesse <http://localhost:3000>
+```
+
+- Ou instale as dependências manual e inicie o servidor:
+
+```bash
+# Install the dependencies
+$ npm install
+
+# development
+$ npm run start
+
+# watch mode
+$ npm run start:dev
+
+# production mode
+$ npm run start:prod
+```
+
+### Test
+
+```
+# unit tests
+$ npm run test
+
+# e2e tests
+$ npm run test:e2e
+
+# test coverage
+$ npm run test:cov
+```
+
+### Frontend (Angular)
+
+Este projeto foi gerado com Angular CLI version 10.0.8.
+
+- Para baixar o projeto siga as instruções abaixo:
+
+```bash
+$ git https://github.com/MaikeRds/desafio-frontend.git
+$ cd desafio-frontend
+```
+
+- Instalar usando docker para realizar processo automatizado de inicialização.
+
+```bash
+# Iniciar a construção de containers
+$ docker-compose up
+
+# O servidor inciará na porta:4200 - acesse <http://localhost:4200>
+```
+
+or
+
+```bash
+$ npm install
+$ ng serve
+```
