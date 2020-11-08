@@ -41,7 +41,7 @@ export class EstabelecimentoReadComponent implements OnInit {
   filterPredicate(): void {
     this.dataSource.filterPredicate = function(data, filter: string): boolean {
       return data.endereco.toLowerCase().includes(filter)
-      || data.complemento.toLowerCase().includes(filter)
+      || (data.complemento && data.complemento.toLowerCase().includes(filter))
       || data.bairro.toLowerCase().includes(filter)
       || data.cidade.toLowerCase().includes(filter)
       || data.estado.toLowerCase().includes(filter)
